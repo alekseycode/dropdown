@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NavBar />
-        {children}
+        <div className="flex flex-col items-center mt-10">{children}</div>
       </body>
     </html>
   );
