@@ -12,12 +12,19 @@ export default function NavBar() {
         <NavLink
           href="/pages/projects"
           name="Projects"
-          dropDownItems={["projects1", "projects2", "projects3"]}
+          dropDownItems={{
+            projects1: ["projects1a", "projects1b", "projects1c"],
+            projects2: ["projects2a", "projects2b"],
+            projects3: ["projects3a", "projects3b", "projects3c"],
+          }}
         />
         <NavLink
           href="/pages/about"
           name="About"
-          dropDownItems={["about1", "about2"]}
+          dropDownItems={{
+            about1: ["about1a", "about1b", "about1c"],
+            about2: ["about2a", "about2b"],
+          }}
         />
         <NavLink href="/pages/contact" name="Contact" />
       </div>

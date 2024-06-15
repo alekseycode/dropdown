@@ -15,12 +15,13 @@ export default function NavLink({ name, href, dropDownItems }) {
       <Link href={href}>{name}</Link>
       <div className="flex flex-col absolute">
         {isHovered &&
-          dropDownItems &&
-          dropDownItems.map((item, i) => (
+          Object.keys(dropDownItems || {}).length > 0 &&
+          Object.keys(dropDownItems).map((item, i) => (
             <div key={i} className="mt-6 animate-fade-in">
               <DropDown
-                href={"/pages/" + name.toLowerCase() + "/" + item}
+                href={`/pages/${name.toLowerCase()}/${item}`}
                 name={item}
+                nestedItems={dropDownItems[item]}
               />
             </div>
           ))}
